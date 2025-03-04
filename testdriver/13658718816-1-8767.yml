@@ -1,0 +1,13 @@
+version: 4.2.12
+session: 67c73002240cc2cc5960c68f
+steps:
+  - prompt: Click on "Manual Redaction."
+    commands:
+      - command: hover-text
+        text: Manual Redaction
+        description: button for manual redaction feature
+        action: click
+  - prompt: Assert that the web page loads without any errors.
+    commands:
+      - command: wait-for-text
+        text: Manual Redaction
