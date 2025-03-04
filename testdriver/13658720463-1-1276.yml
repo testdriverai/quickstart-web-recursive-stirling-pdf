@@ -1,0 +1,29 @@
+version: 4.2.12
+session: 67c7300c9c88094147b03c86
+steps:
+  - prompt: Click on "Add Watermark."
+    commands:
+      - command: hover-text
+        text: Add Watermark
+        description: option under Sign & Security section
+        action: click
+  - prompt: Click on the website logo or "Home" link.
+    commands:
+      - command: hover-text
+        text: Stirling PDF
+        description: website logo in the top left corner
+        action: click
+  - prompt: Assert that the homepage is displayed.
+    commands:
+      - command: assert
+        expect: Your locally hosted one-stop-shop for all your PDF needs.
+  - prompt: Verify that all main navigation links are present.
+    commands:
+      - command: assert
+        expect: Multi Tool
+      - command: assert
+        expect: Pipeline
+      - command: assert
+        expect: Compress
+      - command: assert
+        expect: View/Edit PDF
