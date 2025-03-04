@@ -1,0 +1,22 @@
+version: 4.2.12
+session: 67c730119c88094147b03c95
+steps:
+  - prompt: Click on "Manual Redaction."
+    commands:
+      - command: hover-text
+        text: Manual Redaction
+        description: button for manual redaction feature
+        action: click
+  - prompt: Click on the search icon or field if available.
+    commands:
+      - command: hover-image
+        description: search icon in the browser toolbar
+        action: click
+  - prompt: Enter a search term related to PDF redaction.
+    commands:
+      - command: hover-text
+        text: Search
+        description: search input field
+        action: click
+      - command: type
+        text: PDF redaction tools
