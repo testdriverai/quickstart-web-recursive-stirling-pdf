@@ -1,0 +1,43 @@
+version: 4.2.12
+session: 67c73016240cc2cc5960c6ba
+steps:
+  - prompt: Click on "Add Watermark."
+    commands:
+      - command: hover-text
+        text: Add Watermark
+        description: option under Sign & Security section
+        action: click
+  - prompt: Click on "Add Watermark."
+    commands:
+      - command: hover-text
+        text: Add Watermark
+        description: option under Sign & Security section
+        action: click
+  - prompt: Upload a document.
+    commands:
+      - command: hover-text
+        text: Click or Drag & Drop
+        description: upload area for adding a watermark
+        action: click
+  - prompt: Upload a document.
+    commands:
+      - command: type
+        text: example.pdf
+      - command: press-keys
+        keys:
+          - enter
+  - prompt: Upload a document.
+    commands:
+      - command: hover-text
+        text: OK
+        description: error dialog confirmation button
+        action: click
+      - command: hover-text
+        text: File name
+        description: file name input field
+        action: click
+      - command: type
+        text: valid_document.pdf
+      - command: press-keys
+        keys:
+          - enter
