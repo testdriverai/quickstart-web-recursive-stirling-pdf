@@ -1,0 +1,32 @@
+version: 4.2.12
+session: 67c72c29240cc2cc5960c55d
+steps:
+  - prompt: Click on "Convert file to PDF."
+    commands:
+      - command: hover-text
+        text: Convert file to PDF
+        description: option to convert files to PDF format
+        action: click
+  - prompt: Upload a test file.
+    commands:
+      - command: hover-text
+        text: Click or Drag & Drop
+        description: file upload area
+        action: click
+  - prompt: Upload a test file.
+    commands:
+      - command: type
+        text: example.txt
+      - command: press-keys
+        keys:
+          - enter
+  - prompt: Upload a test file.
+    commands:
+      - command: hover-text
+        text: OK
+        description: close error message
+        action: click
+      - command: hover-text
+        text: yarn.lock
+        description: select a valid file
+        action: double-click
