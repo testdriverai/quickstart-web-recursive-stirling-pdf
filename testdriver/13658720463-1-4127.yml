@@ -1,0 +1,15 @@
+version: 4.2.12
+session: 67c73008240cc2cc5960c697
+steps:
+  - prompt: Click on "Add Watermark."
+    commands:
+      - command: hover-text
+        text: Add Watermark
+        description: option under Sign & Security section
+        action: click
+  - prompt: Click on "Add Watermark" option.
+    commands:
+      - command: hover-text
+        text: Add Watermark
+        description: option under Sign & Security section
+        action: click
