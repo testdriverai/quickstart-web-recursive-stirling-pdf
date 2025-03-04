@@ -1,0 +1,15 @@
+version: 4.2.12
+session: 67c73013240cc2cc5960c6b0
+steps:
+  - prompt: Click on "Add Watermark."
+    commands:
+      - command: hover-text
+        text: Add Watermark
+        description: option under Sign & Security section
+        action: click
+      - command: press-keys
+        keys:
+          - control
+          - l
+      - command: type
+        text: Test Document
