@@ -1,0 +1,15 @@
+version: 4.2.12
+session: 67c73014240cc2cc5960c6b6
+steps:
+  - prompt: Click on "Manual Redaction."
+    commands:
+      - command: hover-text
+        text: Manual Redaction
+        description: button for manual redaction feature
+        action: click
+  - prompt: Click on "Manual Redaction."
+    commands:
+      - command: hover-text
+        text: Manual Redaction
+        description: button for manual redaction feature
+        action: click
