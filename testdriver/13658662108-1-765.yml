@@ -1,0 +1,48 @@
+version: 4.2.12
+session: 67c72f59240cc2cc5960c5fb
+steps:
+  - prompt: Focus the search input.
+    commands:
+      - command: hover-text
+        text: Search for features...
+        description: search input in the center of the page
+        action: click
+  - prompt: Type "PDF Multi Tool" into the search bar.
+    commands:
+      - command: hover-text
+        text: Search for features...
+        description: search input in the center of the page
+        action: click
+      - command: type
+        text: PDF Multi Tool
+  - prompt: Click the search icon or press enter.
+    commands:
+      - command: press-keys
+        keys:
+          - enter
+  - prompt: Assert that the search results display the "PDF Multi Tool" option.
+    commands:
+      - command: assert
+        expect: the search results display "PDF Multi Tool"
+  - prompt: Click on "UPGRADE TO PRO."
+    commands:
+      - command: hover-text
+        text: UPGRADE TO PRO
+        description: upgrade button in the top right of the header
+        action: click
+  - prompt: Verify that the pricing page or sign-up form loads.
+    commands:
+      - command: assert
+        expect: >-
+          the page displays "Affordable plans for the most powerful PDF tools
+          available"
+  - prompt: Assert that no errors are displayed during the process.
+    commands:
+      - command: assert
+        expect: the page does not display "Error" or "404"
+  - prompt: Navigate back to the homepage.
+    commands:
+      - command: hover-text
+        text: Stirling PDF
+        description: logo in the top left corner
+        action: click
