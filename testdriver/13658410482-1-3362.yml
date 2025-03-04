@@ -1,0 +1,41 @@
+version: 4.2.12
+session: 67c72c1d240cc2cc5960c557
+steps:
+  - prompt: Click on "UPGRADE TO PRO."
+    commands:
+      - command: hover-text
+        text: UPGRADE TO PRO
+        description: upgrade button in the top right of the header
+        action: click
+  - prompt: Verify that the pricing page or sign-up form loads.
+    commands:
+      - command: wait-for-text
+        text: Affordable plans for the most powerful PDF tools available
+  - prompt: Assert that no errors are displayed during the process.
+    commands:
+      - command: assert
+        expect: no error messages are visible on the page
+  - prompt: Navigate back to the homepage.
+    commands:
+      - command: press-keys
+        keys:
+          - alt
+          - left
+  - prompt: Navigate back to the homepage.
+    commands:
+      - command: press-keys
+        keys:
+          - alt
+          - left
+  - prompt: Navigate back to the homepage.
+    commands:
+      - command: press-keys
+        keys:
+          - alt
+          - left
+  - prompt: Navigate back to the homepage.
+    commands:
+      - command: hover-text
+        text: Stirling PDF
+        description: logo in the top left corner
+        action: click
