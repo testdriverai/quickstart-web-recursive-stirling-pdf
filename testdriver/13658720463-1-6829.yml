@@ -1,0 +1,28 @@
+version: 4.2.12
+session: 67c730139c88094147b03c9f
+steps:
+  - prompt: Click on "Add Watermark."
+    commands:
+      - command: hover-text
+        text: Add Watermark
+        description: option under Sign & Security section
+        action: click
+  - prompt: Focus the search input.
+    commands:
+      - command: hover-text
+        text: stirlingpdf.io/add-watermark
+        description: URL in the address bar
+        action: click
+  - prompt: Type "PDF Multi Tool" into the search bar.
+    commands:
+      - command: type
+        text: PDF Multi Tool
+  - prompt: Click the search icon or press enter.
+    commands:
+      - command: press-keys
+        keys:
+          - enter
+  - prompt: Assert that the search results display the "PDF Multi Tool" option.
+    commands:
+      - command: assert
+        expect: the search results display "PDF Multi Tool"
