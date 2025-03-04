@@ -1,0 +1,26 @@
+version: 4.2.12
+session: 67c72c28240cc2cc5960c55b
+steps:
+  - prompt: Focus the search input.
+    commands:
+      - command: hover-text
+        text: Search for features...
+        description: search input in the center of the page
+        action: click
+  - prompt: Type "PDF Multi Tool" into the search bar.
+    commands:
+      - command: hover-text
+        text: Search for features...
+        description: search input in the center of the page
+        action: click
+      - command: type
+        text: PDF Multi Tool
+  - prompt: Click the search icon or press enter.
+    commands:
+      - command: press-keys
+        keys:
+          - enter
+  - prompt: Assert that the search results display the "PDF Multi Tool" option.
+    commands:
+      - command: assert
+        expect: the search results display "PDF Multi Tool"
