@@ -1,0 +1,31 @@
+version: 4.2.12
+session: 67c73011240cc2cc5960c6a9
+steps:
+  - prompt: Click on "Add Watermark."
+    commands:
+      - command: hover-text
+        text: Add Watermark
+        description: option under Sign & Security section
+        action: click
+  - prompt: Click on "UPGRADE TO PRO."
+    commands:
+      - command: hover-text
+        text: UPGRADE TO PRO
+        description: upgrade button in the application
+        action: click
+  - prompt: Verify that the pricing page or sign-up form loads.
+    commands:
+      - command: hover-text
+        text: Affordable plans for the most powerful PDF tools available
+        description: header text on the pricing page
+        action: hover
+  - prompt: Assert that no errors are displayed during the process.
+    commands:
+      - command: assert
+        expect: no error messages are visible on the pricing page
+  - prompt: Navigate back to the homepage.
+    commands:
+      - command: hover-text
+        text: Stirling PDF
+        description: logo link to the homepage
+        action: click
