@@ -1,0 +1,25 @@
+version: 4.2.12
+session: 67c730119c88094147b03c93
+steps:
+  - prompt: Click on "Manual Redaction."
+    commands:
+      - command: hover-text
+        text: Manual Redaction
+        description: button for manual redaction feature
+        action: click
+  - prompt: Click the "Manual Redaction" button.
+    commands:
+      - command: hover-text
+        text: Manual Redaction
+        description: button for manual redaction feature
+        action: click
+  - prompt: Assert that the redaction interface is displayed.
+    commands:
+      - command: assert
+        expect: the redaction interface is displayed with "Manual Redaction" text
+  - prompt: Check that the redaction tools are functional.
+    commands:
+      - command: hover-text
+        text: Click or Drag & Drop
+        description: area to initiate file upload for redaction
+        action: click
