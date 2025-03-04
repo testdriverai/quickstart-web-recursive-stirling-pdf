@@ -1,0 +1,44 @@
+version: 4.2.12
+session: 67c72f56240cc2cc5960c5f3
+steps:
+  - prompt: Focus the search input.
+    commands:
+      - command: hover-text
+        text: Search for features...
+        description: search input in the center of the page
+        action: click
+  - prompt: Type "PDF Multi Tool" into the search bar.
+    commands:
+      - command: hover-text
+        text: Search for features...
+        description: search input in the center of the page
+        action: click
+      - command: type
+        text: PDF Multi Tool
+  - prompt: Click the search icon or press enter.
+    commands:
+      - command: press-keys
+        keys:
+          - enter
+  - prompt: Assert that the search results display the "PDF Multi Tool" option.
+    commands:
+      - command: assert
+        expect: the search results display "PDF Multi Tool"
+  - prompt: Click on the "UPGRADE TO PRO" button.
+    commands:
+      - command: hover-text
+        text: UPGRADE TO PRO
+        description: upgrade button in the top right corner
+        action: click
+  - prompt: Assert that the upgrade page is displayed.
+    commands:
+      - command: assert
+        expect: the upgrade page with pricing plans is displayed
+  - prompt: Assert that the pricing information is visible.
+    commands:
+      - command: assert
+        expect: pricing plans are visible on the page
+  - prompt: Assert there are no errors on the page.
+    commands:
+      - command: assert
+        expect: no error messages are visible on the page
